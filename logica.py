@@ -12,7 +12,14 @@ def construir_menu():
     return menu
 
 def crear_archivo_de_goles(): 
-    """ """
+    """
+    Esta función crea un archivo de texto, en la carpeta de del repositorio local con la informacion de los goles de cabeze de Messi
+    El archivo creado tiene formato JSON, con:
+        -El equipo contrario
+        -El minuto en que fue hecho
+        -La competicion (Liga o Champions)
+    Los datos se obtienen de un archivo csv
+    """
 
     archivo = open("Lionel Messi Goals.csv", "r")
     arch = open("Archivo de goles de cabeza con Formato JSON", "w")
@@ -32,7 +39,13 @@ def crear_archivo_de_goles():
     arch.close()
 
 def crear_archivo_de_animales():
-    """ """
+    """
+    Crea un archivo de texto con formato JSON de animales de la familia de los elefantes
+    Los datos del Texto son:
+    -Nombre de la Especie
+    -La Familia, en este caso de elefantes
+    -La Clase, en este caso Mamifero
+    """
 
     archivo = open("animals.csv", "r")
     arch = open("Archivo de Animales con Formato JSON", "w")
