@@ -7,8 +7,8 @@ def construir_menu():
     """Ventana: -Boton para Crear archivo de goles de Messi
                 -Boton para Crear archivo de animales
                 -Boton para salir(unica forma de cerrar la ventana"""
-    layout=[[sg.Text("-Elige una opción-")],[sg.Button("Goles de cabeza de Lionel Messi", size =(50, 10), key = "-GOLES-")], [sg.Button("Animales de la familia de los elefantes", size =(50, 10), key = "-MUNDIAL-")], [sg.Button("Salir", size =(50, 10), key = "-SALIR-")]]
-    menu = sg.Window("ACTIVIDAD 1 POR Python Plus - TEORIA -").Layout(layout)
+    layout=[[sg.Text("-Elige una opción-")],[sg.Button("Goles de cabeza de Lionel Messi", size =(50, 10), key = "-GOLES-")], [sg.Button("Animales de la familia de los elefantes", size =(50, 10), key = "-ANIMALES-")], [sg.Button("Salir", size =(50, 10), key = "-SALIR-")]]
+    menu = sg.Window("ACTIVIDAD 1 POR Python Plus - TEORIA -", layout, no_titlebar = True)
     return menu
 
 def crear_archivo_de_goles(): 
@@ -56,7 +56,7 @@ def crear_archivo_de_animales():
 
     datos = {"Nom":"Nombre","Familia": "Familia","Clase": "Clase"}
     json.dump(datos, arch)
-
+    
     for linea in csvreader:
         if linea[12] == "Elephantidae":            
             datos = {"Nom":linea[1],"Familia":linea[12],"Clase":linea[5]}

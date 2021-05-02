@@ -6,7 +6,7 @@ def mod_menu():
     while True:
         event, _values= menu.read()
         
-        if event == "-SALIR-" or event == sg.WINDOW_CLOSED:
+        if event == "-SALIR-":
             break
         elif event == "-GOLES-":
             crear_archivo_de_goles()
